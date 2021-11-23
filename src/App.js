@@ -1,9 +1,9 @@
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <header className="App-header">
-          Learn React
+          Training Restaurant
       </header>
     </div>
   );
