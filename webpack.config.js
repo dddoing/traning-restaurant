@@ -12,7 +12,7 @@ module.exports = {
         port: 3002,
     },
     output: {
-        publicPath: "auto",
+        publicPath: "http://localhost:3002/",
     },
     module: {
         rules: [
@@ -34,7 +34,11 @@ module.exports = {
             exposes: {
                 "./App": "./src/App",
             },
-            shared: { react: { singleton: true }, "react-dom": { singleton: true } },
+            // shared: ['react', 'react-dom'],
+            shared: { "react": { singleton: true ,strictVersion:true},
+                "react-dom": { singleton: true ,strictVersion:true},
+                "react-router-dom": { singleton: true ,strictVersion:true }
+                },
         }),
         new HtmlWebpackPlugin({
             template: "./public/index.html",
