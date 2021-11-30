@@ -5,7 +5,7 @@ export default class App extends React.Component {
         return (
             <div>
                 <header className="App-header">
-                    Training
+                    Trainings : {sessionStorage.getItem('pass')}
                 </header>
             </div>
         )
