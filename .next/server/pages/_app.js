@@ -1,160 +1,74 @@
 (function() {
 var exports = {};
-exports.id = 888;
-exports.ids = [888];
+exports.id = "pages/_app";
+exports.ids = ["pages/_app"];
 exports.modules = {
 
-/***/ 381:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+/***/ "./src/pages/_app.js":
+/*!***************************!*\
+  !*** ./src/pages/_app.js ***!
+  \***************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "react/jsx-dev-runtime");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+var _jsxFileName = "C:\\Users\\nextree\\IdeaProjects\\micro-frontend\\training-restaurant\\src\\pages\\_app.js";
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+if (false) {}
 
 
-var _interopRequireDefault = __webpack_require__(426);
 
-exports.__esModule = true;
-exports.Container = Container;
-exports.createUrl = createUrl;
-exports.default = void 0;
-
-var _react = _interopRequireDefault(__webpack_require__(297));
-
-var _utils = __webpack_require__(579);
-
-exports.AppInitialProps = _utils.AppInitialProps;
-exports.NextWebVitalsMetric = _utils.NextWebVitalsMetric;
-/**
-* `App` component is used for initialize of pages. It allows for overwriting and full control of the `page` initialization.
-* This allows for keeping state between navigation, custom error handling, injecting additional data.
-*/
-
-async function appGetInitialProps({
-  Component,
-  ctx
-}) {
-  const pageProps = await (0, _utils.loadGetInitialProps)(Component, ctx);
-  return {
-    pageProps
-  };
-}
-
-class App extends _react.default.Component {
-  // Kept here for backwards compatibility.
-  // When someone ended App they could call `super.componentDidCatch`.
-  // @deprecated This method is no longer needed. Errors are caught at the top level
-  componentDidCatch(error, _errorInfo) {
-    throw error;
-  }
-
+class App extends (react__WEBPACK_IMPORTED_MODULE_1___default().Component) {
+  //
   render() {
+    //
     const {
-      router,
       Component,
-      pageProps,
-      __N_SSG,
-      __N_SSP
+      pageProps
     } = this.props;
-    return /*#__PURE__*/_react.default.createElement(Component, Object.assign({}, pageProps, // we don't add the legacy URL prop if it's using non-legacy
-    // methods like getStaticProps and getServerSideProps
-    !(__N_SSG || __N_SSP) ? {
-      url: createUrl(router)
-    } : {}));
+    return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Component, _objectSpread({}, pageProps), void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 31,
+      columnNumber: 13
+    }, this);
   }
 
 }
 
-exports.default = App;
-App.origGetInitialProps = appGetInitialProps;
-App.getInitialProps = appGetInitialProps;
-let warnContainer;
-let warnUrl;
-
-if (false) {} // @deprecated noop for now until removal
-
-
-function Container(p) {
-  if (false) {}
-  return p.children;
-}
-
-function createUrl(router) {
-  // This is to make sure we don't references the router object at call time
-  const {
-    pathname,
-    asPath,
-    query
-  } = router;
-  return {
-    get query() {
-      if (false) {}
-      return query;
-    },
-
-    get pathname() {
-      if (false) {}
-      return pathname;
-    },
-
-    get asPath() {
-      if (false) {}
-      return asPath;
-    },
-
-    back: () => {
-      if (false) {}
-      router.back();
-    },
-    push: (url, as) => {
-      if (false) {}
-      return router.push(url, as);
-    },
-    pushTo: (href, as) => {
-      if (false) {}
-      const pushRoute = as ? href : '';
-      const pushUrl = as || href;
-      return router.push(pushRoute, pushUrl);
-    },
-    replace: (url, as) => {
-      if (false) {}
-      return router.replace(url, as);
-    },
-    replaceTo: (href, as) => {
-      if (false) {}
-      const replaceRoute = as ? href : '';
-      const replaceUrl = as || href;
-      return router.replace(replaceRoute, replaceUrl);
-    }
-  };
-}
+/* harmony default export */ __webpack_exports__["default"] = (App);
 
 /***/ }),
 
-/***/ 426:
-/***/ (function(module) {
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    "default": obj
-  };
-}
-
-module.exports = _interopRequireDefault;
-
-/***/ }),
-
-/***/ 579:
-/***/ (function(module) {
-
-"use strict";
-module.exports = require("next/dist/next-server/lib/utils.js");;
-
-/***/ }),
-
-/***/ 297:
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
 /***/ (function(module) {
 
 "use strict";
 module.exports = require("react");;
+
+/***/ }),
+
+/***/ "react/jsx-dev-runtime":
+/*!****************************************!*\
+  !*** external "react/jsx-dev-runtime" ***!
+  \****************************************/
+/***/ (function(module) {
+
+"use strict";
+module.exports = require("react/jsx-dev-runtime");;
 
 /***/ })
 
@@ -165,7 +79,8 @@ module.exports = require("react");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
-var __webpack_exports__ = (__webpack_exec__(381));
+var __webpack_exports__ = (__webpack_exec__("./src/pages/_app.js"));
 module.exports = __webpack_exports__;
 
 })();
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly90cmFpbmluZy1yZXN0YXVyYW50Ly4vc3JjL3BhZ2VzL19hcHAuanMiLCJ3ZWJwYWNrOi8vdHJhaW5pbmctcmVzdGF1cmFudC9leHRlcm5hbCBcInJlYWN0XCIiLCJ3ZWJwYWNrOi8vdHJhaW5pbmctcmVzdGF1cmFudC9leHRlcm5hbCBcInJlYWN0L2pzeC1kZXYtcnVudGltZVwiIl0sIm5hbWVzIjpbIkFwcCIsIlJlYWN0IiwicmVuZGVyIiwiQ29tcG9uZW50IiwicGFnZVByb3BzIiwicHJvcHMiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLElBQUksT0FBaUIsRUFxQnBCOztBQUNEOztBQUVBLE1BQU1BLEdBQU4sU0FBa0JDLHdEQUFsQixDQUFrQztBQUM5QjtBQUNBQyxRQUFNLEdBQUc7QUFDTDtBQUNBLFVBQU07QUFBRUMsZUFBRjtBQUFZQztBQUFaLFFBQTBCLEtBQUtDLEtBQXJDO0FBQ0Esd0JBQ0ksOERBQUMsU0FBRCxvQkFBZUQsU0FBZjtBQUFBO0FBQUE7QUFBQTtBQUFBLFlBREo7QUFHSDs7QUFSNkI7O0FBV2xDLCtEQUFlSixHQUFmLEU7Ozs7Ozs7Ozs7O0FDbkNBLG1DOzs7Ozs7Ozs7OztBQ0FBLG1EIiwiZmlsZSI6InBhZ2VzL19hcHAuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpZiAocHJvY2Vzcy5icm93c2VyKSB7XG4gIE9iamVjdC5hc3NpZ24oX193ZWJwYWNrX3NoYXJlX3Njb3Blc19fLmRlZmF1bHQsIHtcbiAgICBcIm5leHQvbGlua1wiOiB7XG4gICAgICBbbmV4dC52ZXJzaW9uXToge1xuICAgICAgICBsb2FkZWQ6IHRydWUsXG4gICAgICAgIGdldDogKCkgPT4gUHJvbWlzZS5yZXNvbHZlKCgpID0+IHJlcXVpcmUoXCJuZXh0L2xpbmtcIikpLFxuICAgICAgfSxcbiAgICB9LFxuICAgIFwibmV4dC9oZWFkXCI6IHtcbiAgICAgIFtuZXh0LnZlcnNpb25dOiB7XG4gICAgICAgIGxvYWRlZDogdHJ1ZSxcbiAgICAgICAgZ2V0OiAoKSA9PiBQcm9taXNlLnJlc29sdmUoKCkgPT4gcmVxdWlyZShcIm5leHQvaGVhZFwiKSksXG4gICAgICB9LFxuICAgIH0sXG4gICAgXCJuZXh0L2R5bmFtaWNcIjoge1xuICAgICAgW25leHQudmVyc2lvbl06IHtcbiAgICAgICAgbG9hZGVkOiB0cnVlLFxuICAgICAgICBnZXQ6ICgpID0+IFByb21pc2UucmVzb2x2ZSgoKSA9PiByZXF1aXJlKFwibmV4dC9keW5hbWljXCIpKSxcbiAgICAgIH0sXG4gICAgfSxcbiAgfSk7XG59XG5pbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xyXG5cclxuY2xhc3MgQXBwIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcclxuICAgIC8vXHJcbiAgICByZW5kZXIoKSB7XHJcbiAgICAgICAgLy9cclxuICAgICAgICBjb25zdCB7IENvbXBvbmVudCxwYWdlUHJvcHMgfSA9IHRoaXMucHJvcHNcclxuICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICA8Q29tcG9uZW50IHsuLi5wYWdlUHJvcHN9IC8+XHJcbiAgICAgICAgKVxyXG4gICAgfVxyXG59XHJcblxyXG5leHBvcnQgZGVmYXVsdCBBcHA7IiwibW9kdWxlLmV4cG9ydHMgPSByZXF1aXJlKFwicmVhY3RcIik7OyIsIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcInJlYWN0L2pzeC1kZXYtcnVudGltZVwiKTs7Il0sInNvdXJjZVJvb3QiOiIifQ==
